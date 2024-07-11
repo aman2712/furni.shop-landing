@@ -1,0 +1,74 @@
+.products {
+  margin: 8rem 6rem 0 6rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: "Merriweather", sans-serif;
+  color: var(--green);
+  margin-bottom: 2rem;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.product {
+  padding: 2rem;
+  position: relative;
+}
+
+.product::before {
+  height: 65%;
+  background-color: var(--light-gray);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  z-index: -1;
+  transition: height 0.3s ease-out;
+}
+
+.product:hover::before {
+  height: 100%;
+}
+
+.product > img {
+  width: 17rem;
+  margin: 3rem auto 0 auto;
+}
+
+.product > h3 {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.product > p {
+  font-size: 1.1rem;
+  color: var(--gray);
+}
+
+@media screen and (max-width: 462px) {
+  .products {
+    margin: 2rem;
+  }
+  .productsGrid {
+    grid-template-columns: 1fr !important;
+  }
+  .product {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .productsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .products {
+    margin: 2rem;
+  }
+}

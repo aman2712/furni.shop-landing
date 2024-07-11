@@ -1,0 +1,42 @@
+.deals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 7rem 6rem 2rem 6rem;
+  gap: 2rem;
+}
+
+.title {
+  font-family: "Merriweather", sans-serif;
+  color: var(--green);
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.deals > div > h3 {
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 1.2rem 0;
+}
+
+.deals > div > p {
+  color: var(--gray);
+}
+
+@media screen and (max-width: 462px) {
+  .deals {
+    grid-template-columns: 1fr !important;
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .deals {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

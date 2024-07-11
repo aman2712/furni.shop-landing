@@ -1,0 +1,61 @@
+.auth {
+  height: 80vh;
+  margin: 0 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form {
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 2rem;
+  flex: 0.33;
+}
+
+.form > h1 {
+  font-family: "Merriweather", sans-serif;
+  color: var(--green);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.inputContainer {
+  margin-bottom: 2rem;
+}
+
+.inputContainer > label {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.inputContainer > input {
+  display: block;
+  border: 1px dotted var(--black);
+  width: 100%;
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.inputContainer > input:focus {
+  border: 1px solid var(--green);
+}
+
+.form > button {
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: var(--green);
+  font-family: "Poppins", sans-serif;
+  color: #f1f1f1;
+  border: none;
+}
+
+.bgImg {
+  flex: 0.6;
+}
+
+.bgImg > img {
+  width: 100%;
+}

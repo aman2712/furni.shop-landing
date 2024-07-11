@@ -1,0 +1,91 @@
+.footer {
+  --footer-gray: rgb(196, 196, 196);
+  padding: 6rem 6rem 0 6rem;
+  background-color: var(--green);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: #f1f1f1;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.desc {
+  color: var(--footer-gray);
+  margin: 1rem 0;
+}
+
+.links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.links > svg {
+  color: #f1f1f1;
+  font-size: 1.4rem;
+  margin-top: 1remrem;
+}
+
+.footerGrid > div > h4 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #f1f1f1;
+}
+
+.footerGrid > div > a {
+  color: var(--footer-gray);
+  display: block;
+  text-decoration: none;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.services {
+  margin-left: 1.5rem;
+}
+
+.copyright {
+  text-align: center;
+  color: var(--footer-gray);
+  margin-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+@media screen and (max-width: 462px) {
+  .footer {
+    padding: 2rem !important;
+  }
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+  .services {
+    margin-left: 0;
+  }
+  .footerGrid > div:nth-child(1) {
+    margin-bottom: 2rem;
+  }
+  .copyright {
+    padding-bottom: 0.5rem !important;
+    font-size: 0.8rem;
+  }
+  .links {
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .footer {
+    padding: 3rem 3rem 0 3rem;
+  }
+  .copyright {
+    padding-bottom: 1rem;
+  }
+}
