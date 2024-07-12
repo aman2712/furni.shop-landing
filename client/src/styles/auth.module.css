@@ -21,7 +21,7 @@
 }
 
 .inputContainer {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .inputContainer > label {
@@ -50,6 +50,7 @@
   font-family: "Poppins", sans-serif;
   color: #f1f1f1;
   border: none;
+  cursor: pointer;
 }
 
 .bgImg {
@@ -58,4 +59,16 @@
 
 .bgImg > img {
   width: 100%;
+}
+
+.bottomText {
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.bottomText > span {
+  color: var(--green);
+  font-weight: 600;
+  cursor: pointer;
 }

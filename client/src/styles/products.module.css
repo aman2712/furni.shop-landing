@@ -36,9 +36,15 @@
   height: 100%;
 }
 
-.product > img {
-  width: 17rem;
-  margin: 3rem auto 0 auto;
+.product > .imgContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.product > .imgContainer > img {
+  width: 100%;
+  margin-top: 3rem;
 }
 
 .product > h3 {

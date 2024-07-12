@@ -6,16 +6,22 @@ import Navbar from "./components/navbar";
 import Home from "./screens/home";
 import Auth from "./screens/auth";
 
+import { AuthProvider } from "./context/AuthContext";
+
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/auth" element={<Auth />} />
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+    <main className="container">
+      <AuthProvider>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/auth" element={<Auth />} />
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </AuthProvider>
+    </main>
   );
 }
 

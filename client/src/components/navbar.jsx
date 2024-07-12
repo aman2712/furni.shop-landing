@@ -4,23 +4,33 @@ import { CiSearch } from "react-icons/ci";
 import { BiMenuAltRight } from "react-icons/bi";
 import { GiTireIronCross } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 const Navbar = () => {
   const [searchActive, setSearchActive] = useState(false);
   const [toggleNav, setToggleNav] = useState(false);
 
+  const { isAuth, logout } = useContext(AuthContext);
+
   return (
     <>
       {/* navbar for desktop designs */}
       <nav className={classes.nav}>
-        <a href="#" className={classes.logo}>
+        <Link to="/" className={classes.logo}>
           furni.shop
-        </a>
+        </Link>
         <div className={classes.links}>
-          <a href="#">Home</a>
-          <a href="#">About</a>
-          <a href="#">Products</a>
-          <Link to="/auth">Login</Link>
+          <Link to="/">Home</Link>
+          <a href="/#about">About</a>
+          <a href="/#products">Products</a>
+          {isAuth ? (
+            <a href="#" onClick={logout}>
+              Logout
+            </a>
+          ) : (
+            <Link to="/auth">Login</Link>
+          )}
         </div>
         <div className={classes.search}>
           <div className={classes.inputContainer}>

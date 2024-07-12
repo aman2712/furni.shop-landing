@@ -4,7 +4,7 @@ import { BounceAnimation } from "./animation";
 
 const About = () => {
   return (
-    <div className={classes.about}>
+    <div className={classes.about} id="about">
       <div className={classes.aboutHeader}>
         <div>
           <h1>About Us</h1>

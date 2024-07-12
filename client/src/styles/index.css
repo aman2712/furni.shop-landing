@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+/* add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
 /* defining color variables */
 :root {
   --green: #254d4d;
@@ -23,6 +28,6 @@ body {
 }
 
 .container {
-  max-width: 90rem;
+  max-width: 100rem;
   margin: 0 auto;
 }
